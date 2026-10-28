@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Experimental</title>
+    <!-- Conexão com o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- CARD EXPERIMENTAL DO POST -->
+    <article class="card-post">
+        
+        <!-- Imagem no Topo -->
+        <img 
+            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" 
+            alt="Notebook sobre uma mesa de madeira exibindo linhas de código em um ambiente aconchegante." 
+            class="capa-post"
+        >
+
+        <div class="conteudo-post">
+            <!-- Tag de Categoria -->
+            <span class="tag-categoria">Dicas de Estudo</span>
+
+            <!-- Título do Post -->
+            <h1>O Poder da Prática Guiada</h1>
+
+            <!-- Metadados -->
+            <div class="meta-info">
+                Por <strong>Dev Estudante</strong> • 🕒 3 min de leitura
+            </div>
+
+            <!-- Texto do Post -->
+            <p>Quando estamos aprendendo a programar, a melhor maneira de absorver conhecimento é alterando o código existente e observando o resultado na hora.</p>
+
+            <!-- Bloco de Citação em Destaque -->
+            <blockquote>
+                "Não tenha medo de quebrar o layout. É consertando os erros que a lógica se fixa na mente."
+            </blockquote>
+
+            <p>Experimente trocar a ordem das imagens, mover os títulos para baixo ou agrupar os elementos em novos containers.</p>
+
+            <!-- Área dos botões de reação -->
+            <div class="area-reacoes">
+                <button class="btn-reacao">🔥 Incrível <span class="contador">0</span></button>
+                <button class="btn-reacao">💡 Útil <span class="contador">0</span></button>
+                <button class="btn-reacao">🚀 Bora! <span class="contador">0</span></button>
+            </div>
+        </div>
+
+    </article>
+
+    <!-- JavaScript das Reações -->
+    <script>
+        const botoesReacao = document.querySelectorAll(".btn-reacao");
+
+        botoesReacao.forEach(function(botao) {
+            let contagem = 0;
+            const elementoContador = botao.querySelector(".contador");
+
+            botao.addEventListener("click", function() {
+                contagem = contagem + 1;
+                elementoContador.textContent = contagem;
+            });
+        });
+    </script>
+
+</body>
+</html>
